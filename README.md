@@ -32,19 +32,19 @@ Turning ideas into code that ships across **TypeScript**, **C#**, **Go**, and **
     <td width="50%">
       <h3><a href="https://github.com/emptylower/seichigo">⛩️ seichigo</a></h3>
       <p>二刺猿圣地巡礼 — Anime pilgrimage web app. Discover real-world locations from your favorite anime.</p>
-      <p><img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/seichigo?style=flat-square&color=ffb7c5&label=★" /></p>
+      <p><img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/seichigo?style=flat-square&color=ffb7c5&label=stars" /></p>
     </td>
     <td width="50%">
       <h3><a href="https://github.com/emptylower/STS2-Game-Lobby">🎮 STS2-Game-Lobby</a></h3>
       <p>Third-party multiplayer lobby for Slay the Spire 2. Client mod + lobby service + relay fallback.</p>
-      <p><img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/STS2-Game-Lobby?style=flat-square&color=feca57&label=★" /></p>
+      <p><img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/STS2-Game-Lobby?style=flat-square&color=feca57&label=stars" /></p>
     </td>
   </tr>
   <tr>
     <td width="50%">
       <h3><a href="https://github.com/emptylower/Slay-the-Spire-2-multiplayer-LAN-mod">🌐 STS2-LAN-Mod</a></h3>
       <p>Increases the vanilla 4-player multiplayer lobby limit for Slay the Spire 2.</p>
-      <p><img src="https://img.shields.io/badge/C%23-68217a?style=flat-square&logo=csharp&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/Slay-the-Spire-2-multiplayer-LAN-mod?style=flat-square&color=4ecdc4&label=★" /></p>
+      <p><img src="https://img.shields.io/badge/C%23-68217a?style=flat-square&logo=csharp&logoColor=white" /> <img src="https://img.shields.io/github/stars/emptylower/Slay-the-Spire-2-multiplayer-LAN-mod?style=flat-square&color=4ecdc4&label=stars" /></p>
     </td>
     <td width="50%">
       <h3><a href="https://github.com/emptylower/sub2api">🔄 sub2api</a></h3>
@@ -80,7 +80,7 @@ Turning ideas into code that ships across **TypeScript**, **C#**, **Go**, and **
   </tr>
   <tr>
     <td><img src="/github-metrics/followup.indepth.svg" alt="Issues & PRs" /></td>
-    <td><img src="/github-metrics/repositories.pinned.svg" alt="Pinned Repos" /></td>
+    <td><img src="/github-metrics/habits.charts.svg" alt="Coding Habits" /></td>
   </tr>
   <tr>
     <td><img src="/github-metrics/base.svg" alt="Base Stats" /></td>
@@ -93,6 +93,9 @@ Turning ideas into code that ships across **TypeScript**, **C#**, **Go**, and **
   <tr>
     <td><img src="/github-metrics/isocalendar.fullyear.svg" alt="Isocalendar" /></td>
     <td><img src="/github-metrics/calendar.full.svg" alt="Calendar" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="/github-metrics/activity.svg" alt="Recent Activity" /></td>
   </tr>
 </table>
 
