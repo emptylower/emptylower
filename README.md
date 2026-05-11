@@ -80,11 +80,11 @@ Turning ideas into code that ships across **TypeScript**, **C#**, **Go**, and **
   </tr>
   <tr>
     <td><img src="/github-metrics/followup.indepth.svg" alt="Issues & PRs" /></td>
-    <td><img src="/github-metrics/habits.charts.svg" alt="Coding Habits" /></td>
+    <td><img src="https://streak-stats.demolab.com?user=emptylower&theme=tokyonight&hide_border=true&ring=ffb7c5&fire=ffb7c5&currStreakLabel=c9a0dc&sideLabels=7c83ff&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=8b949e&background=00000000" alt="Streak Stats" /></td>
   </tr>
   <tr>
     <td><img src="/github-metrics/base.svg" alt="Base Stats" /></td>
-    <td><img src="/github-metrics/achievements.compact.svg" alt="Achievements" /></td>
+    <td><img src="https://github-profile-trophy.vercel.app/?username=emptylower&theme=onestar&no-bg=true&no-frame=true&column=4&margin-w=10&margin-h=10" alt="Trophies" /></td>
   </tr>
   <tr>
     <td><img src="/github-metrics/stars.svg" alt="Recently Starred" /></td>
@@ -95,7 +95,7 @@ Turning ideas into code that ships across **TypeScript**, **C#**, **Go**, and **
     <td><img src="/github-metrics/calendar.full.svg" alt="Calendar" /></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="/github-metrics/activity.svg" alt="Recent Activity" /></td>
+    <td colspan="2"><img src="https://github-readme-activity-graph.vercel.app/graph?username=emptylower&bg_color=00000000&color=c9d1d9&line=ffb7c5&point=7c83ff&area=true&area_color=ffb7c5&hide_border=true" alt="Activity Graph" /></td>
   </tr>
 </table>
 
