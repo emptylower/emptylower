@@ -1,26 +1,22 @@
 # GitHub Profile Metrics — Sakura Night Theme
-# Powered by https://github.com/lowlighter/metrics
-# Configuration adapted from Lhy723, customized for emptylower
+# Each metric is a separate job so you can re-run individual failures
+# plugins_errors_fatal: yes ensures broken SVGs never overwrite good ones
 
 name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Run daily at midnight UTC
-  workflow_dispatch:       # Allow manual trigger
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
-  github-metrics:
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-    permissions:
-      contents: write
-    steps:
 
-      # ===== 基础信息 =====
-      - name: base
-        uses: lowlighter/metrics@latest
+  base:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/base.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -32,20 +28,28 @@ jobs:
           plugin_lines: yes
           plugin_introduction: yes
           plugin_gists: yes
+          plugins_errors_fatal: yes
 
-      # ===== 📅 Isometric Commit Calendar (Full Year) =====
-      - name: Full-year calendar
-        uses: lowlighter/metrics@latest
+  isocalendar:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+          plugins_errors_fatal: yes
 
-      # ===== 🈷️ Languages (In-depth Analysis) =====
-      - name: Languages indepth
-        uses: lowlighter/metrics@latest
+  languages:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/languages.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -58,30 +62,42 @@ jobs:
           plugin_languages_details: lines, bytes-size
           plugin_languages_limit: 6
           plugin_languages_analysis_timeout: 15
+          plugins_errors_fatal: yes
 
-      # ===== ✨ Stargazers Chart =====
-      - name: Stargazers chartist
-        uses: lowlighter/metrics@latest
+  stargazers:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/stargazers.chartist.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_stargazers: yes
           plugin_stargazers_charts_type: chartist
+          plugins_errors_fatal: yes
 
-      # ===== 🌟 Recently Starred Repositories =====
-      - name: Recently starred
-        uses: lowlighter/metrics@latest
+  stars:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/stars.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_stars: yes
           plugin_stars_limit: 10
+          plugins_errors_fatal: yes
 
-      # ===== 💡 Coding Habits =====
-      - name: Coding habits
-        uses: lowlighter/metrics@latest
+  habits:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/habits.charts.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -92,20 +108,28 @@ jobs:
           plugin_habits_from: 200
           plugin_habits_days: 30
           config_timezone: Asia/Shanghai
+          plugins_errors_fatal: yes
 
-      # ===== 🎟️ Issues & Pull Requests Follow-up =====
-      - name: Followup indepth
-        uses: lowlighter/metrics@latest
+  followup:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/followup.indepth.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_followup: yes
           plugin_followup_indepth: yes
+          plugins_errors_fatal: yes
 
-      # ===== 🎭 Comment Reactions =====
-      - name: Comment reactions
-        uses: lowlighter/metrics@latest
+  reactions:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/reactions.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -113,20 +137,28 @@ jobs:
           plugin_reactions: yes
           plugin_reactions_limit: 100
           plugin_reactions_details: percentage
+          plugins_errors_fatal: yes
 
-      # ===== 📆 Commit Calendar (Full History) =====
-      - name: Full history calendar
-        uses: lowlighter/metrics@latest
+  calendar:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/calendar.full.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_calendar: yes
-          plugin_calendar_limit: 4
+          plugin_calendar_limit: 2
+          plugins_errors_fatal: yes
 
-      # ===== 🏆 Achievements =====
-      - name: Achievements
-        uses: lowlighter/metrics@latest
+  achievements:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/achievements.compact.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -134,10 +166,14 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_display: compact
           plugin_achievements_threshold: B
+          plugins_errors_fatal: yes
 
-      # ===== 📰 Recent Activity =====
-      - name: Recent activity
-        uses: lowlighter/metrics@latest
+  activity:
+    runs-on: ubuntu-latest
+    environment: production
+    permissions: { contents: write }
+    steps:
+      - uses: lowlighter/metrics@latest
         with:
           filename: github-metrics/activity.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -145,4 +181,4 @@ jobs:
           plugin_activity: yes
           plugin_activity_limit: 5
           plugin_activity_days: 14
-          plugin_activity_filter: issue, pr, release, fork, review, ref/create
+          plugins_errors_fatal: yes
