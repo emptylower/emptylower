@@ -7,6 +7,9 @@
 #   whose contributor stats include deleted accounts, so it must not take `base` down.
 # - No third-party Vercel badge services: they hit spending limits (HTTP 402) and
 #   render as broken images. Everything below is generated here and committed.
+# - plugin_achievements and plugin_habits are intentionally absent: upstream metrics
+#   (unmaintained since 2023) queries GitHub's removed "Projects (classic)" API and
+#   crashes on new event payloads, so those plugins fail on every run.
 
 name: GitHub Metrics
 
@@ -165,40 +168,4 @@ jobs:
           base: ""
           plugin_calendar: yes
           plugin_calendar_limit: 2
-          plugins_errors_fatal: yes
-
-  achievements:
-    runs-on: ubuntu-latest
-    environment: production
-    permissions: { contents: write }
-    timeout-minutes: 20
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: github-metrics/achievements.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: C
-          plugin_achievements_secrets: yes
-          plugins_errors_fatal: yes
-
-  habits:
-    runs-on: ubuntu-latest
-    environment: production
-    permissions: { contents: write }
-    timeout-minutes: 20
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: github-metrics/habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
           plugins_errors_fatal: yes
